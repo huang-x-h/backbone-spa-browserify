@@ -1,7 +1,7 @@
-var jQuery = require('jquery');
+var $ = require('jquery');
 var _ = require('underscore');
 var Backbone = require('backbone');
-Backbone.$ = jQuery;
+Backbone.$ = $;
 
 var app = require('./app');
 var Router = require('./router');
