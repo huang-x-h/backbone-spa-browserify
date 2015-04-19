@@ -3,15 +3,14 @@
  */
 
 var gulp = require('gulp');
-var jshint = require('gulp-jshint');
 var del = require('del');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-var rev = require('gulp-rev');
 
 var browserifyConfig =  {
     entries: './app/main.js',
-    standalne: 'bundle'
+    debug: true,
+    extensions: ['.hbs']
 }
 
 gulp.task('clear', function(cb) {
@@ -25,16 +24,4 @@ gulp.task('browserify', function() {
         .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('jshint', function() {
-    gulp.src('js/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
-gulp.task('rev', function () {
-    gulp.src('build/js/*.js')
-        .pipe(rev())
-        .pipe(gulp.dest('build/js'))
-});
-
-gulp.task('default', ['clear', 'jshint', 'browserify', 'rev']);
+gulp.task('default', ['clear', 'browserify']);
