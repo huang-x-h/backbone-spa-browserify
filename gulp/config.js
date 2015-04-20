@@ -18,11 +18,15 @@ module.exports = {
         }]
     },
     less: {
-        src: "./less/bundle.less",
+        src: './less/bundle.less',
         dest: dest
     },
     production: {
         jsSrc: dest + '/*.js',
         dest: dest
+    },
+    vendor: {
+        src: './node_modules',
+        dest: dest + '/vendor'
     }
 };

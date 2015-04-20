@@ -1,5 +1,9 @@
+// fix for bootstrap
+jQuery = require('jquery');
+require('bootstrap');
+
 var Backbone = require('backbone');
-Backbone.$ = require('jquery');
+Backbone.$ = jQuery;
 
 var app = require('./app');
 var Router = require('./router');
