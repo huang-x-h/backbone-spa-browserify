@@ -1,0 +1,33 @@
+// Transforms
+// --------------------------------------------------
+.translate3d(@x; @y; @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+}
+
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+  transition-duration: @transition-duration;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // Slide animation
+  &.sliding {
+    .translate3d(0, 0, 0);
+    .transition-duration(.4s);
+
+    &.left {
+      .translate3d(-100%, 0, 0);
+    }
+
+    &.right {
+      .translate3d(100%, 0, 0);
+    }
+  }
+}

@@ -17,13 +17,9 @@ module.exports = {
             require: ['jquery', 'backbone/node_modules/underscore']
         }]
     },
-    sass: {
-        src: "/sass/**/*.{sass,scss}",
-        dest: dest,
-        settings: {
-            indentedSyntax: true, // Enable .sass syntax!
-            imagePath: 'images' // Used by the image-url helper
-        }
+    less: {
+        src: "./less/bundle.less",
+        dest: dest
     },
     production: {
         jsSrc: dest + '/*.js',

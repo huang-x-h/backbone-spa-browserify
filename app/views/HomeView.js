@@ -6,6 +6,8 @@ var Backbone = require('backbone'),
     UserCollection = require('../collections/UserCollection');
 
 var HomeView = Backbone.View.extend({
+    className: 'page',
+
     initialize: function () {
         this.userList = new UserCollection();
         this.render();

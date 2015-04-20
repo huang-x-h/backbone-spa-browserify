@@ -7,6 +7,8 @@ var $ = require('jquery'),
     template = require('../templates/UserList.hbs');
 
 var UserListView = Backbone.View.extend({
+    className: 'page',
+
     events: {
         'click tr': 'onClick'
     },
