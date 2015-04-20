@@ -1,7 +1,5 @@
-var $ = require('jquery');
-var _ = require('underscore');
 var Backbone = require('backbone');
-Backbone.$ = $;
+Backbone.$ = require('jquery');
 
 var app = require('./app');
 var Router = require('./router');
@@ -9,5 +7,5 @@ var Router = require('./router');
 app.router = new Router();
 
 Backbone.history.start({
-    root : app.root
+    root: app.root
 });

@@ -17,6 +17,8 @@ var HomeView = Backbone.View.extend({
         });
 
         this.$el.html(this.listView.$el);
+        this.userList.fetch();
+
         return this;
     }
 });

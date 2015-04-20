@@ -1,7 +1,8 @@
 /**
  * Created by huangxinghui on 2015/4/19.
  */
-var Backbone = require('backbone'),
+var $ = require('jquery'),
+    Backbone = require('backbone'),
     app = require('../app'),
     template = require('../templates/UserList.hbs');
 
@@ -17,12 +18,12 @@ var UserListView = Backbone.View.extend({
     },
 
     render: function () {
-        this.$el.html(template(this.collection.toJSON()));
+        this.$el.html(template({users: this.collection.toJSON()}));
         return this;
     },
 
     onClick: function (e) {
-        var id = $(e.target).data('id');
+        var id = $(e.currentTarget).data('id');
         app.router.navigate('user/' + id, {trigger: true});
     }
 });
