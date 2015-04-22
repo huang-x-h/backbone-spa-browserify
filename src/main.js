@@ -1,15 +1,12 @@
-// fix for bootstrap
-jQuery = require('jquery');
-require('bootstrap');
+require('./plugins');
 
 var Backbone = require('backbone');
-Backbone.$ = jQuery;
-
 var app = require('./app');
 var Router = require('./router');
 
 app.router = new Router();
 
 Backbone.history.start({
-    root: app.root
+    root: app.root,
+    pushState: true
 });
