@@ -13,8 +13,7 @@ module.exports = {
             entries: src + '/main.js',
             dest: dest,
             outputName: 'bundle.js',
-            extensions: ['.hbs'],
-            require: ['jquery', 'backbone/node_modules/underscore']
+            extensions: ['.hbs']
         }]
     },
     less: {
