@@ -1,6 +1,4 @@
-/**
- * Created by huangxinghui on 2015/4/22.
- */
+/* eslint no-undef:0 */
 var Backbone = require('backbone');
 
 // fix for bootstrap

@@ -1,8 +1,7 @@
 /**
  * Created by huangxinghui on 2015/4/19.
  */
-var _ = require('underscore'),
-    Backbone = require('backbone'),
+var Backbone = require('backbone'),
     User = require('../models/UserModel'),
     service = require('../mockservice/UserService');
 

@@ -1,6 +1,4 @@
-/**
- * Created by huangxinghui on 2015/4/20.
- */
+/* eslint new-cap:0 */
 var _ = require('underscore'),
     $ = require('jquery'),
     users = [
@@ -213,7 +211,7 @@ var _ = require('underscore'),
         var deferred = $.Deferred();
 
         deferred.resolve(_.find(users, function (item) {
-            return item.id == id;
+            return item.id === id;
         }));
 
         return deferred.promise();

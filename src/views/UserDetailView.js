@@ -1,8 +1,7 @@
 /**
  * Created by huangxinghui on 2015/4/20.
  */
-var $ = require('jquery'),
-    Backbone = require('backbone'),
+var Backbone = require('backbone'),
     template = require('../templates/UserDetail.hbs');
 
 module.exports = Backbone.View.extend({

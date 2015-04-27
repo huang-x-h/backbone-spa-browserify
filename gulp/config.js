@@ -20,6 +20,9 @@ module.exports = {
         src: './less/bundle.less',
         dest: dest
     },
+    eslint: {
+        src: src + '/**/*.js'
+    },
     production: {
         jsSrc: dest + '/*.js',
         dest: dest
