@@ -2,7 +2,7 @@ require('./plugins');
 
 var Backbone = require('backbone');
 var app = require('./app');
-var Router = require('./router');
+var Router = require('./routers/router');
 
 app.router = new Router();
 
