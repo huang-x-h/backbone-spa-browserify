@@ -3,12 +3,12 @@
  */
 var $ = require('jquery'),
     Backbone = require('backbone'),
-    PageSlider = require('./utils/pageslider'),
+    PageSlider = require('../utils/pageslider'),
     slider = new PageSlider($('body')),
-    HomeView = require('./views/HomeView'),
+    HomeView = require('../views/HomeView'),
     homeView = new HomeView().render(),
-    UserDetailView = require('./views/UserDetailView'),
-    User = require('./models/UserModel');
+    UserDetailView = require('../views/UserDetailView'),
+    User = require('../models/UserModel');
 
 var Router = Backbone.Router.extend({
     routes: {
@@ -21,7 +21,7 @@ var Router = Backbone.Router.extend({
     },
 
     viewUserDetail: function (id) {
-        var user = new User({id: id});
+        var user = new User({id: parseInt(id)});
         user.fetch({
             success: function (data) {
                 slider.slidePage(new UserDetailView({model: data}).$el);
